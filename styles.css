@@ -113,3 +113,29 @@ a:hover {
         padding: 1rem;
     }
 }
+
+.social-footer {
+  margin-top: 2rem;
+  padding-top: 1rem;
+  border-top: 1px solid #ccc;
+  text-align: center;
+}
+.social-footer h3 {
+  margin-bottom: 0.5rem;
+}
+.social-list {
+  list-style: none;
+  padding: 0;
+  display: inline-flex;
+  gap: 1rem;
+}
+.social-list li {
+  font-size: 0.9rem;
+}
+.social-list a {
+  color: #0077cc;
+  text-decoration: none;
+}
+.social-list a:hover {
+  text-decoration: underline;
+}
