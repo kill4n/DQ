@@ -20,9 +20,26 @@ header {
     z-index: 100;
 }
 
+
+/* Header row for title and hamburger */
+.header-row {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    position: relative;
+}
+
 header h1 {
+    flex: 1 1 auto;
     text-align: center;
     margin-bottom: 1rem;
+    font-size: 2rem;
+    z-index: 2;
+}
+
+.hamburger {
+    z-index: 3;
 }
 
 .hamburger {
@@ -138,10 +155,24 @@ img {
 }
 
 @media (max-width: 768px) {
+    .header-row {
+        justify-content: center;
+        padding: 0 1rem;
+    }
     .hamburger {
         display: flex;
+        position: absolute;
+        left: 0.5rem;
+        top: 50%;
+        transform: translateY(-50%);
+        margin: 0;
     }
-    
+    header h1 {
+        font-size: 1.2rem;
+        margin-bottom: 0.5rem;
+        text-align: center;
+        flex: 1 1 auto;
+    }
     nav ul {
         position: fixed;
         top: 0;
@@ -156,21 +187,17 @@ img {
         transition: left 0.3s ease;
         z-index: 1000;
     }
-    
     nav ul.active {
         left: 0;
     }
-    
     nav ul li a {
         font-size: 1.2rem;
         padding: 1rem 2rem;
     }
-    
     main {
         margin: 1rem 0;
         padding: 0;
     }
-    
     section {
         padding: 1rem;
     }
