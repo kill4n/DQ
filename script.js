@@ -1,8 +1,15 @@
 document.addEventListener('DOMContentLoaded', function() {
     const botonSaludo = document.getElementById('boton-saludo');
+    const hamburger = document.getElementById('hamburger');
+    const navMenu = document.getElementById('nav-menu');
     
     botonSaludo.addEventListener('click', function() {
         alert('¡Hola! Gracias por visitar mi página web.');
+    });
+
+    hamburger.addEventListener('click', function() {
+        hamburger.classList.toggle('active');
+        navMenu.classList.toggle('active');
     });
 
     const enlaces = document.querySelectorAll('nav a[href^="#"]');
@@ -19,6 +26,10 @@ document.addEventListener('DOMContentLoaded', function() {
                     behavior: 'smooth',
                     block: 'start'
                 });
+                
+                // Cerrar menú móvil después de hacer clic
+                hamburger.classList.remove('active');
+                navMenu.classList.remove('active');
             }
         });
     });
